@@ -5,10 +5,28 @@ import Footer from "@/components/footer"
 import SocialFloat from "@/components/social-float"
 import "./globals.css"
 
+const siteUrl = "https://ubaid-portfolio-roan.vercel.app"
+const title = "Muhammad Ubaid — Agentic Engineer+ Full-Stack Developer"
+const description =
+  "Karachi-based Agentic Engineer+ Full-Stack Developer. Unified 5+ systems into one ERP; multi-agent AI system placed Runner-Up at Hackfest x Datathon 2026 and launched as Unscripted."
+
 export const metadata: Metadata = {
-  title: "Muhammad Ubaid — Full-Stack Developer & AI Systems Architect",
-  description:
-    "Full-stack developer and AI systems architect based in Karachi. I build enterprise web systems, AI agents, and scalable digital products using Django, Next.js, and LangChain.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Muhammad Ubaid",
+    title,
+    description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 }
 
 export default function RootLayout({

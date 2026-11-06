@@ -11,7 +11,7 @@ import {
 import HeroSection from "@/components/hero-section";
 import About from "@/components/about";
 import { ToolsSection } from "@/components/tool-section";
-import CaseStudy from "@/components/case-study";
+import ProjectsSection from "@/components/projects-section";
 import TeachingSection from "@/components/teaching-section";
 import TestimonialsSection from "@/components/testimonials-section";
 
@@ -94,13 +94,11 @@ export default function Portfolio() {
       {/* About Section */}
       <About />
 
-   
-
-      {/* Case Study */}
-      {/* <CaseStudy /> */}
+      {/* Projects */}
+      <ProjectsSection />
 
       {/* Services */}
-      <section id="services" className="py-16 sm:py-24 md:py-32 lg:py-36 bg-black relative overflow-hidden">
+      <section id="services" className="py-12 md:py-14 bg-black relative overflow-hidden">
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -109,15 +107,15 @@ export default function Portfolio() {
           }}
         />
         <div className="container relative z-10 mx-auto px-4 sm:px-6 max-w-7xl">
-          <div className="text-center mb-10 sm:mb-16">
+          <div className="text-center mb-8">
             <span className="text-brand uppercase tracking-[0.25em] text-xs sm:text-sm font-black block mb-3 sm:mb-4">
               What I Build For You
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-3">
               Your Vision,{" "}
               <span className="text-brand">My Code.</span>
             </h2>
-            <p className="text-white/50 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/50 text-base max-w-2xl mx-auto leading-relaxed">
               Every service is engineered to deliver real systems — not demos. Production-ready, scalable, and built to last.
             </p>
           </div>
@@ -126,7 +124,7 @@ export default function Portfolio() {
             {services.map((service, idx) => (
               <div
                 key={idx}
-                className="group relative p-5 sm:p-6 lg:p-7 rounded-2xl border border-brand/15 bg-[#1a0a1a]/70 hover:border-brand/50 hover:bg-[#220822] transition-all duration-400 overflow-hidden"
+                className="group relative p-5 rounded-2xl border border-brand/15 bg-[#1a0a1a]/70 hover:border-brand/50 hover:bg-[#220822] transition-all duration-400 overflow-hidden"
               >
                 <div className="absolute -top-8 -right-8 w-24 h-24 bg-brand/0 group-hover:bg-brand/20 rounded-full blur-2xl transition-all duration-500 pointer-events-none" />
 
@@ -157,25 +155,6 @@ export default function Portfolio() {
       {/* Testimonials */}
       <TestimonialsSection />
 
-      {/* CTA Section */}
-      <section id="contact" className="py-24 md:py-32 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 z-0" style={{ background: "radial-gradient(60% 60% at 50% 50%, #2b092b 0%, #000000 60%)" }} />
-        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-          <span className="text-brand uppercase tracking-[0.25em] text-xs font-black block mb-4">Ready to Build?</span>
-          <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tight mb-6">
-            Have a project <span className="text-brand">in mind?</span>
-          </h2>
-          <p className="text-white/50 text-lg mb-10 leading-relaxed">
-            Let&apos;s turn your idea into a production-ready system. Django. Next.js. AI agents. Real results.
-          </p>
-          <a
-            href="mailto:ubaid.quadgentics@gmail.com"
-            className="inline-flex items-center gap-3 bg-brand hover:bg-brand/90 text-white px-10 py-5 rounded-full font-bold text-lg uppercase tracking-widest transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(163,0,217,0.4)]"
-          >
-            Let&apos;s Work Together
-          </a>
-        </div>
-      </section>
     </div>
   );
 }

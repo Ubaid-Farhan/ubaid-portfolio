@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
   const isPlaceholder = false; // flip to false when real testimonials ready
 
   return (
-    <section className="pt-16 pb-20 md:pt-20 md:pb-28 bg-black relative overflow-hidden">
+    <section className="pt-12 pb-12 md:pt-14 md:pb-14 bg-black relative overflow-hidden">
       <div
         className="absolute inset-0"
         style={{ background: "radial-gradient(90% 70% at 50% 50%, #150515 0%, #000000 65%)" }}
@@ -69,7 +69,7 @@ export default function TestimonialsSection() {
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
 
         {/* Header */}
-        <div className="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <span className="text-brand uppercase tracking-[0.25em] text-sm font-black block mb-4">
               Testimonials

@@ -36,17 +36,17 @@ export function ToolsSlider({ images }: ToolsSliderProps) {
                     loop: true,
                 }}
             >
-                <CarouselContent className="-ml-8 md:-ml-16 items-center">
+                <CarouselContent className="-ml-6 md:-ml-10 items-center">
                     {images.map((image, index) => (
-                        <CarouselItem key={index} className="pl-8 md:pl-16 basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 select-none">
+                        <CarouselItem key={index} className="pl-6 md:pl-10 basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 select-none">
                             {/* Fixed size container for uniform logos without grayscale */}
-                            <div className="relative h-14 sm:h-20 md:h-24 w-24 sm:w-36 md:w-44 flex items-center justify-center mx-auto">
+                            <div className="relative h-[clamp(32px,3.6vw,52px)] w-[clamp(64px,8vw,120px)] flex items-center justify-center mx-auto">
                                 <Image
                                     src={image}
                                     alt={`Tool logo ${index + 1}`}
                                     width={200}
                                     height={200}
-                                    className="object-contain max-h-12 sm:max-h-16 md:max-h-20 max-w-full"
+                                    className="object-contain max-h-[clamp(26px,2.8vw,40px)] max-w-full w-auto"
                                 />
                             </div>
                         </CarouselItem>
