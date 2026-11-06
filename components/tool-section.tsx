@@ -16,7 +16,7 @@ export function ToolsSection() {
     ]
 
     return (
-        <section className="bg-[#F8F8F8] py-8 md:py-6 border-b border-gray-200">
+        <section className="bg-[#F8F8F8] py-4 md:py-4 border-b border-gray-200">
             <ToolsSlider images={[...images, ...images]} />
         </section>
     )

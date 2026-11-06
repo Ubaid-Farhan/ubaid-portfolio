@@ -4,26 +4,26 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#0a0a0a] text-white overflow-hidden">
+    <footer id="contact" className="w-full bg-[#0a0a0a] text-white overflow-hidden">
       {/* Top Purple Bar */}
       <div className="w-full bg-[#A300D9] py-4 text-center px-4">
         <h2 className="text-white font-extrabold tracking-widest text-sm md:text-base uppercase">
-          Muhammad Ubaid — Full-Stack Developer &amp; AI Systems Architect
+          Muhammad Ubaid — Agentic Engineer+ Full-Stack Developer
         </h2>
       </div>
 
-      <div className="container mx-auto px-6 py-20 max-w-[1400px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-8 mb-12">
+      <div className="container mx-auto px-6 py-12 max-w-[1400px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-x-8 mb-4">
 
           {/* Left Column */}
           <div className="lg:col-span-6 flex flex-col justify-start">
-            <div className="mb-8">
+            <div className="mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/ubaid/LOGO.png" alt="Muhammad Ubaid" className="w-48 md:w-64 h-auto object-contain" style={{ background: "transparent", mixBlendMode: "screen", filter: "drop-shadow(0.3px 0 0 white) drop-shadow(-0.3px 0 0 white)" }} />
             </div>
 
-            <div className="space-y-6 mb-8">
-              <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-black uppercase leading-[1.1] tracking-tight text-white">
+            <div className="space-y-4 mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-[1.1] tracking-tight text-white">
                 Have a project <br />
                 in mind? <br />
                 Let&apos;s build it together.
@@ -77,7 +77,7 @@ const Footer = () => {
 
               <div className="flex flex-wrap gap-3">
                 {[
-                  { Icon: Github, href: "https://github.com/fun33333/" },
+                  { Icon: Github, href: "https://github.com/Ubaid-Farhan" },
                   { Icon: Linkedin, href: "https://www.linkedin.com/in/ubaid-farhan/" },
                 ].map(({ Icon, href }, index) => (
                   <a
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-8 text-center bg-[#0a0a0a]">
+      <div className="border-t border-white/10 py-5 text-center bg-[#0a0a0a]">
         <p className="text-xs md:text-sm text-gray-500 font-medium">
           © {new Date().getFullYear()} – Muhammad Ubaid. All rights reserved.
         </p>

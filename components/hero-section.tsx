@@ -1,46 +1,16 @@
 "use client";
 
-import { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { Server, Package, Trophy, GraduationCap, Users } from "lucide-react";
 
 const stats = [
-  { value: 3, suffix: "+", label: "Systems Shipped", icon: Server },
-  { value: 2, suffix: "", label: "Products Sold", icon: Package },
-  { value: 1, suffix: "", label: "Hackathon Won", icon: Trophy },
-  { value: 250, suffix: "+", label: "Students Trained", icon: GraduationCap },
-  { value: 50, suffix: "+", label: "Teachers Upskilled", icon: Users },
+  { value: "5+", label: "Systems unified into 1 ERP" },
+  { value: "Runner-Up", label: "GDG x IBA Datathon 2026" },
+  { value: "1", label: "AI MVP launched" },
+  { value: "2,000+", label: "Students trained" },
+  { value: "50+", label: "Educators upskilled" },
 ];
 
-
-function StatItem({
-  value, suffix, label, icon: Icon,
-}: {
-  value: number; suffix: string; label: string; icon: React.ElementType;
-}) {
-  return (
-    <div className="flex flex-col items-center justify-center gap-1.5 py-6 px-4">
-      <div className="flex items-end gap-0.5 leading-none">
-        <span className="text-5xl sm:text-6xl font-black text-white tracking-tighter">
-          {value}
-        </span>
-        <span className="text-3xl sm:text-4xl font-black text-brand mb-0.5">
-          {suffix}
-        </span>
-      </div>
-      <div className="flex items-center gap-1.5">
-        <Icon className="w-4 h-4 text-brand/80 shrink-0" />
-        <span className="text-white/50 text-[10px] sm:text-xs uppercase tracking-[0.18em] font-bold">
-          {label}
-        </span>
-      </div>
-    </div>
-  );
-}
-
 export default function HeroSection() {
-  const statsRef = useRef<HTMLDivElement>(null);
-
   const glowStyle = `
     @keyframes pulse-glow {
       0%, 100% { box-shadow: 0 0 0 0 rgba(163,0,217,0.5), 0 0 12px rgba(163,0,217,0.3); }
@@ -54,40 +24,41 @@ export default function HeroSection() {
     <section
       className="flex flex-col relative group overflow-hidden"
       style={{
-        minHeight: "calc(100svh - 80px)",
+        // Fill the first screen (minus navbar and logo strip), capped so it never feels huge.
+        minHeight: "min(calc(100svh - 140px), 640px)",
         background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #2b092b 90%, #3d0a3d 100%)"
       }}
     >
       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-700" />
 
       {/* Hero content */}
-      <div className="flex-1 flex items-center justify-center relative z-10">
-        <div className="container mx-auto px-4 max-w-6xl text-center space-y-6">
+      <div className="relative z-10 flex-1 flex items-center py-10 md:py-12">
+        <div className="container mx-auto px-4 max-w-5xl text-center space-y-4 md:space-y-5">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand/40 bg-brand/10 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-brand/40 bg-brand/10 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
-            <span className="text-white/70 text-xs uppercase tracking-[0.25em] font-bold">
+            <span className="text-white/70 text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold">
               Django · Next.js · LangChain · AI Agents
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-[5.5vw] xl:text-[6rem] font-black uppercase tracking-tighter leading-[0.9] mx-auto">
-            <span className="text-white whitespace-nowrap">WEB SYSTEMS. AI PRODUCTS.</span>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-[0.95] mx-auto">
+            <span className="text-white">WEB SYSTEMS. AI PRODUCTS.</span>
             <br />
-            <i><span className="text-[#A300D9]/80 whitespace-nowrap mx-auto">BUILT TO SHIP.</span></i>
+            <i><span className="text-[#A300D9]/80 mx-auto">BUILT TO SHIP.</span></i>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-white/50 text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-white/50 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
             I build enterprise web systems and AI products for startups and organizations — from planning to production.
           </p>
 
           {/* CTA */}
-          <div className="flex justify-center items-center pt-2">
+          <div className="flex justify-center items-center pt-1">
             <button
-              className="flex items-center gap-2 px-10 py-4 rounded-full font-bold text-base uppercase tracking-widest"
+              className="flex items-center gap-2 px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest"
               style={{
                 background: "linear-gradient(to right, #A300D9 50%, rgba(255,255,255,0.95) 50%)",
                 backgroundSize: "200% 100%",
@@ -119,17 +90,21 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Stats row — bottom of hero */}
+      {/* Stats — one slim row */}
       <div
-        ref={statsRef}
         className="relative z-10"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.07)",
-           background: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.4))" }}
+        style={{ borderTop: "1px solid rgba(255,255,255,0.07)", background: "rgba(0,0,0,0.35)" }}
       >
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-x divide-white/10">
-            {stats.map((stat, i) => (
-              <StatItem key={i} {...stat} />
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-y-4 py-4 md:py-4 md:divide-x md:divide-white/10">
+            {stats.map(({ value, label }, i) => (
+              <div
+                key={label}
+                className={`px-2 text-center ${i === stats.length - 1 ? "col-span-2 md:col-span-1" : ""}`}
+              >
+                <div className="text-xl md:text-2xl font-bold text-white leading-none tracking-tight">{value}</div>
+                <div className="text-xs md:text-[13px] text-white/65 leading-tight mt-1.5">{label}</div>
+              </div>
             ))}
           </div>
         </div>

@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const links = [
   { icon: FiLinkedin, href: "https://www.linkedin.com/in/ubaid-farhan/", label: "LinkedIn", hover: "hover:text-[#0A66C2]" },
-  { icon: FiGithub, href: "https://github.com/fun33333/", label: "GitHub", hover: "hover:text-white" },
+  { icon: FiGithub, href: "https://github.com/Ubaid-Farhan", label: "GitHub", hover: "hover:text-white" },
   { icon: FaWhatsapp, href: "https://wa.me/923122134810", label: "WhatsApp", hover: "hover:text-[#25D366]" },
 ];
 
