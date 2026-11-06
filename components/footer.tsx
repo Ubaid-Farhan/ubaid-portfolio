@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <footer id="contact" className="w-full bg-[#0a0a0a] text-white overflow-hidden">
       {/* Top Purple Bar */}
-      <div className="w-full bg-[#4c2576] border-y border-white/10 py-3 text-center px-4">
-        <h2 className="text-[#d8b4ff]/80 font-semibold tracking-[0.2em] text-[11px] md:text-xs uppercase">
+      <div className="w-full bg-[#A300D9]/40 border-y border-white/10 py-3 text-center px-4">
+        <h2 className="text-white font-semibold tracking-[0.2em] text-[11px] md:text-xs uppercase">
           Muhammad Ubaid — Agentic Engineer+ Full-Stack Developer
         </h2>
       </div>

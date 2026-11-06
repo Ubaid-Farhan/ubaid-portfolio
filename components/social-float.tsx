@@ -31,11 +31,12 @@ export default function SocialFloat() {
         18% { transform: translateX(0); box-shadow: none; }
       }
     `}</style>
-    <div className="fixed bottom-8 right-5 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-5 right-3 sm:bottom-8 sm:right-5 z-50 flex flex-col gap-3">
       {links.map(({ icon: Icon, href, label, hover }, i) => (
         /* Wrapper handles entry slide-in only */
         <div
           key={label}
+          className={label === "WhatsApp" ? "" : "hidden sm:block"}
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateX(0)" : "translateX(60px)",
@@ -49,7 +50,7 @@ export default function SocialFloat() {
             rel="noopener noreferrer"
             aria-label={label}
             title={label}
-            className={`w-11 h-11 rounded-2xl bg-black/70 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/50 ${hover} hover:border-brand/50 transition-colors duration-300 block`}
+            className={`w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-black/70 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/50 ${hover} hover:border-brand/50 transition-colors duration-300 block`}
             style={{
               animation: `shake-glow-seq 9s ease-in-out ${i * 3}s infinite`,
             }}
