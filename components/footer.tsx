@@ -10,34 +10,34 @@ const Footer = () => {
   return (
     <footer id="contact" className="w-full bg-[#0a0a0a] text-white overflow-hidden">
       {/* Top Purple Bar */}
-      <div className="w-full bg-[#A300D9] py-4 text-center px-4">
-        <h2 className="text-white font-extrabold tracking-widest text-sm md:text-base uppercase">
+      <div className="w-full bg-[#12061a] border-y border-white/10 py-3 text-center px-4">
+        <h2 className="text-[#d8b4fe]/80 font-semibold tracking-[0.2em] text-[11px] md:text-xs uppercase">
           Muhammad Ubaid — Agentic Engineer+ Full-Stack Developer
         </h2>
       </div>
 
-      <div className="container mx-auto px-6 py-12 max-w-[1400px]">
+      <div className="container mx-auto px-6 py-10 max-w-[1400px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-10 lg:gap-x-8 mb-4">
 
           {/* Left Column */}
           <div className="lg:col-span-6 flex flex-col justify-start">
             <div className="mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/ubaid/LOGO.png" alt="Muhammad Ubaid" className="w-40 md:w-56 h-auto object-contain" style={{ background: "transparent", mixBlendMode: "screen", filter: "drop-shadow(0.3px 0 0 white) drop-shadow(-0.3px 0 0 white)" }} />
+              <img src="/ubaid/LOGO.png" alt="Muhammad Ubaid" className="w-36 md:w-48 h-auto object-contain" style={{ background: "transparent", mixBlendMode: "screen", filter: "drop-shadow(0.3px 0 0 white) drop-shadow(-0.3px 0 0 white)" }} />
             </div>
 
             <div className="space-y-4 mb-7">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-[1.1] tracking-tight text-white">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black uppercase leading-[1.15] tracking-tight text-white">
                 Have a project <br />
                 in mind? <br />
-                <span className="text-[#c084fc]">Let&apos;s build it together.</span>
+                <span className="text-white/55">Let&apos;s build it together.</span>
               </h2>
             </div>
 
             <div className="flex flex-wrap gap-3">
               <a
                 href={`mailto:${EMAIL}`}
-                className="inline-flex items-center gap-2.5 bg-[#A300D9] hover:bg-[#b61ae6] text-white px-7 py-3.5 rounded-full font-bold transition-all uppercase text-sm tracking-widest shadow-[0_0_20px_rgba(163,0,217,0.35)] hover:scale-[1.03]"
+                className="inline-flex items-center gap-2 bg-[#A300D9] hover:bg-[#b61ae6] text-white px-6 py-3 rounded-full font-bold transition-colors uppercase text-xs tracking-widest"
               >
                 <Mail className="w-4 h-4" />
                 Email me
@@ -46,9 +46,9 @@ const Footer = () => {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 border border-[#25D366]/60 text-[#25D366] hover:bg-[#25D366] hover:text-black px-7 py-3.5 rounded-full font-bold transition-all uppercase text-sm tracking-widest hover:scale-[1.03]"
+                className="inline-flex items-center gap-2 border border-white/20 text-white/85 hover:border-[#25D366] hover:text-white px-6 py-3 rounded-full font-bold transition-colors uppercase text-xs tracking-widest"
               >
-                <FaWhatsapp className="w-4 h-4" />
+                <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
                 WhatsApp
               </a>
             </div>
@@ -65,7 +65,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 {['About', 'Projects', 'Services', 'Teaching', 'Contact'].map((link) => (
                   <li key={link}>
-                    <a href={`#${link.toLowerCase()}`} className="text-gray-400 hover:text-[#c084fc] transition-colors text-base font-medium">
+                    <a href={`#${link.toLowerCase()}`} className="text-gray-400 hover:text-white transition-colors text-base font-medium">
                       {link}
                     </a>
                   </li>
@@ -79,15 +79,15 @@ const Footer = () => {
 
               <div className="space-y-3 mb-7">
                 <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 text-gray-400 hover:text-white transition group">
-                  <Mail className="w-5 h-5 text-[#c084fc] shrink-0" />
+                  <Mail className="w-5 h-5 text-white/45 shrink-0" />
                   <span className="text-base font-medium break-all">{EMAIL}</span>
                 </a>
                 <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition group">
-                  <FaWhatsapp className="w-5 h-5 text-[#25D366] shrink-0" />
+                  <FaWhatsapp className="w-5 h-5 text-[#25D366]/80 shrink-0" />
                   <span className="text-base font-medium">{PHONE_DISPLAY}</span>
                 </a>
                 <a href="tel:+923122134810" className="flex items-center gap-3 text-gray-400 hover:text-white transition group">
-                  <Phone className="w-5 h-5 text-[#c084fc] shrink-0" />
+                  <Phone className="w-5 h-5 text-white/45 shrink-0" />
                   <span className="text-base font-medium">Call</span>
                 </a>
               </div>
