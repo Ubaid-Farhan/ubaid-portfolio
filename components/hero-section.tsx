@@ -57,7 +57,8 @@ export default function HeroSection() {
 
           {/* CTA */}
           <div className="flex justify-center items-center pt-1">
-            <button
+            <a
+              href="#contact"
               className="flex items-center gap-2 px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest"
               style={{
                 background: "linear-gradient(to right, #A300D9 50%, rgba(255,255,255,0.95) 50%)",
@@ -68,14 +69,14 @@ export default function HeroSection() {
                 transition: "background-position 0.4s ease, color 0.4s ease, transform 0.3s ease",
               }}
               onMouseEnter={e => {
-                const btn = e.currentTarget as HTMLButtonElement;
+                const btn = e.currentTarget as HTMLAnchorElement;
                 btn.style.backgroundPosition = "left center";
                 btn.style.color = "#ffffff";
                 btn.style.transform = "scale(1.05)";
                 btn.style.animation = "none";
               }}
               onMouseLeave={e => {
-                const btn = e.currentTarget as HTMLButtonElement;
+                const btn = e.currentTarget as HTMLAnchorElement;
                 btn.style.backgroundPosition = "right center";
                 btn.style.color = "#A300D9";
                 btn.style.transform = "scale(1)";
@@ -84,7 +85,7 @@ export default function HeroSection() {
             >
               Hire Me
               <FiArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
 
         </div>
